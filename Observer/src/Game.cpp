@@ -1,4 +1,4 @@
-#include "Game.h"
+#include "../include/Game.h"
 
 Game::Game()
 {
@@ -6,6 +6,7 @@ Game::Game()
     shape.setFillColor(sf::Color::White);
     subject.Attach(static_cast<Observer*>(this));
 }
+
 void Game::update() {
     bool state = subject.getState();
     if (state == true) {
@@ -18,22 +19,22 @@ void Game::update() {
 
 void Game::executar()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Hello SFML Window");
+    sf::RenderWindow window(sf::VideoMode({800, 600}), "Hello SFML Window");
 
     while (window.isOpen())
     {
-        sf::Event event;
-        while (window.pollEvent(event))
+        while (const auto event = window.pollEvent())
         {
-            if (event.type == sf::Event::Closed)
+            if (event->is<sf::Event::Closed>())
             {
                 window.close();
             }
 
-            if (event.type == sf::Event::KeyPressed) {
-                if (event.key.code == sf::Keyboard::W)
+            if (const auto* keyPressed = event->getIf<sf::Event::KeyPressed>())
+            {
+                if (keyPressed->code == sf::Keyboard::Key::W)
                     subject.changeState();
-                else if (event.key.code == sf::Keyboard::Escape)
+                else if (keyPressed->code == sf::Keyboard::Key::Escape)
                     window.close();
             }
         }

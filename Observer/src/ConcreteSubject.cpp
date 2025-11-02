@@ -1,4 +1,4 @@
-#include "ConcreteSubject.h"
+#include "../include/ConcreteSubject.h"
 
 ConcreteSubject::ConcreteSubject():
 	subject()
