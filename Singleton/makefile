@@ -20,7 +20,7 @@ TARGET := $(BIN_DIR)/app.exe
 # Includes
 INCLUDES := -I$(SFML_INCLUDE) -I$(INCLUDE_DIR)
 
-# Bibliotecas (ORDEM IMPORTA!)
+# Bibliotecas (ORDEM IMPORTA! Dependências vêm depois)
 LIBS := -L$(SFML_LIB) \
         -lsfml-graphics-s \
         -lsfml-window-s \
@@ -42,7 +42,6 @@ LIBS := -L$(SFML_LIB) \
         -lversion \
         -lsetupapi
 
-
 # ============================================
 # REGRAS
 # ============================================
@@ -55,7 +54,7 @@ dirs:
 
 # Linkar (OBJETOS VÊM ANTES DAS LIBS!)
 $(TARGET): $(OBJECTS)
-	$(CXX) $(OBJECTS) -o $@ $(LIBS)
+	$(CXX) $(OBJECTS) -o $@ $(LIBS) -static-libgcc -static-libstdc++
 
 # Compilar
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp

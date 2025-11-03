@@ -1,6 +1,6 @@
 # Padrões de Projeto
 
-Este repositório tem como propósito apresentar **exemplos práticos** de cada **padrão de projeto** (Design Pattern), contendo uma **implementação básica** de cada um.  
+Este repositório tem como propósito apresentar **exemplos práticos** de cada **padrão de projeto** (Design Pattern), contendo uma **implementação básica e visual** de cada um.  
 
 O objetivo é **auxiliar os alunos da disciplina** na compreensão e implementação dos padrões de projeto em seus trabalhos acadêmicos.
 

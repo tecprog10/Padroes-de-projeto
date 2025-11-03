@@ -3,6 +3,7 @@
 Game::Game()
 {
     shape.setSize(sf::Vector2f(200, 200));
+    shape.setPosition(sf::Vector2f(300,300));
     shape.setFillColor(sf::Color::White);
     subject.Attach(static_cast<Observer*>(this));
 }
@@ -19,7 +20,7 @@ void Game::update() {
 
 void Game::executar()
 {
-    sf::RenderWindow window(sf::VideoMode({800, 600}), "Hello SFML Window");
+    sf::RenderWindow window(sf::VideoMode({800, 600}), "Exemplo Observer");
 
     while (window.isOpen())
     {
