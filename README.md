@@ -182,7 +182,7 @@ Padrão/
 
 
 ### ❌ "Cannot find entry point no make"
-- Verifique se o seu GCC está pelo menos na versão 15.2.0
+-   Verifique se o seu GCC está pelo menos na versão 15.2.0
 
 ### ❌ "undefined reference to WinMain"
 - Certifique-se de que existe um arquivo `main.cpp` com a função `int main()`
