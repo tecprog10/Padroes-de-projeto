@@ -1,8 +1,9 @@
+#pragma once
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <sstream>
 #include "Singleton.h"
-#pragma once
+
 class Principal
 {
 private:

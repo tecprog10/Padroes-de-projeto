@@ -1,8 +1,8 @@
+#pragma once
 #include <SFML/Graphics.hpp>
 #include "ConcreteSubject.h"
 #include "Observer.h"
 #include <iostream>
-#pragma once
 class Game : Observer
 {
 private:
